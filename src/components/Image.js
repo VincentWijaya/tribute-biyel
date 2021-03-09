@@ -9,10 +9,14 @@ const Image = ({ images }) => {
   images.forEach(image => {
     result.push(
       <ProgressiveImage
+        delay={5000}
         src={image.src}
         placeholder={image.lowResSrc}
       >
-        {src => <img src={src} alt={image.alt} key={image.key} className={image.className} />}
+        { (src, loading) => (
+            <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={image.alt} key={image.key} className={image.className} />
+          )
+        }
       </ProgressiveImage>
     )
   })
