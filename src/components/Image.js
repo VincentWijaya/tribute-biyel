@@ -12,9 +12,10 @@ const Image = ({ images }) => {
         delay={5000}
         src={image.src}
         placeholder={image.lowResSrc}
+        key={`${image.key}`}
       >
         { (src, loading) => (
-            <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={image.alt} key={image.key} className={image.className} />
+          <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={image.alt} key={`${image.key}`} className={image.className} />
           )
         }
       </ProgressiveImage>
