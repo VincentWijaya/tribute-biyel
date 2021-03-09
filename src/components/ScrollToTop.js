@@ -87,8 +87,7 @@ const Scroll = ({
         <IconButton onClick={handleToTop} className={classes.toTop} aria-label='to top'>
           <ExpandLessIcon />
         </IconButton>
-        <IconButton href={BriellePhotobook} target='_blank' download className={classes.downloadPdf} aria-label='download'>
-          {/* <PDFDownloadLink document={<BriellePhotobook />} filename='PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf'> */}
+        <IconButton href={BriellePhotobook} target='_blank' download='PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf' className={classes.downloadPdf} aria-label='download'>
             <GetAppIcon />
         </IconButton>
       </div>
