@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 import IconButton from '@material-ui/core/IconButton'
 import GetAppIcon from '@material-ui/icons/GetApp'
+import FileSaver from 'file-saver'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,6 +72,13 @@ const Scroll = ({
     window[`scrollTo`]({ top: 0, behavior: `smooth` })
   }
 
+  const handleDownloadPdf = () => {
+    FileSaver.saveAs(
+      `${process.env.PUBLIC_URL}/PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf`,
+      'PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf'
+    )
+  }
+
   useEffect(() => {
     if (showBelow) {
       window.addEventListener(`scroll`, handleScroll)
@@ -84,8 +92,8 @@ const Scroll = ({
         <IconButton onClick={handleToTop} className={classes.toTop} aria-label="to top">
           <ExpandLessIcon />
         </IconButton>
-        <IconButton className={classes.downloadPdf} aria-label="download">
-          <GetAppIcon />
+        <IconButton onClick={handleDownloadPdf} className={classes.downloadPdf} aria-label="download">
+            <GetAppIcon />
         </IconButton>
       </div>
     )
