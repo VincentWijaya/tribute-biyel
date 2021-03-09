@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#DCDCDC'
     },
     [theme.breakpoints.up('xs')]: {
-      right: '5%',
+      right: '20%',
       backgroundColor: 'rgb(220,220,220,0.7)',
     },
     [theme.breakpoints.up('lg')]: {
@@ -67,7 +67,7 @@ const Scroll = ({
     }
   }
 
-  const handleClick = () => {
+  const handleToTop = () => {
     window[`scrollTo`]({ top: 0, behavior: `smooth` })
   }
 
@@ -77,11 +77,11 @@ const Scroll = ({
       return () => window.removeEventListener(`scroll`, handleScroll)
     }
   })
-//  
+
   const icons = () => {
     return (
       <div className={classes.root}>
-        <IconButton onClick={handleClick} className={classes.toTop} aria-label="to top">
+        <IconButton onClick={handleToTop} className={classes.toTop} aria-label="to top">
           <ExpandLessIcon />
         </IconButton>
         <IconButton className={classes.downloadPdf} aria-label="download">
