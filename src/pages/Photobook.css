@@ -1,0 +1,9 @@
+.bgimage {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
