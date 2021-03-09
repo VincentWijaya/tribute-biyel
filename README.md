@@ -1,4 +1,4 @@
-# [Visit Me](https://gabriel-angelina.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/98f89750-1c32-4fef-9c9f-db6eef4df63f/deploy-status)](https://app.netlify.com/sites/gabriel-angelina/deploys)
+# [Visit Me](http://gabriel-angelina.my.id/) [![Netlify Status](https://api.netlify.com/api/v1/badges/98f89750-1c32-4fef-9c9f-db6eef4df63f/deploy-status)](https://app.netlify.com/sites/gabriel-angelina/deploys)
 
 # About This Project
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Gabriel_Angelina_at_JKT48_Team_T_Circus_Part_3_Bandung.jpg/898px-Gabriel_Angelina_at_JKT48_Team_T_Circus_Part_3_Bandung.jpg"
