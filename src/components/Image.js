@@ -1,20 +1,27 @@
 import React from 'react'
-import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component'
+import ProgressiveImage from 'react-progressive-graceful-image'
 
 import './Image.css'
 
-const Gallery = ({ images, scrollPosition }) => (
-  <div>
-    {images.map((image) =>
-      <LazyLoadImage
-        key={image.key}
-        alt={image.alt}
-        effect='blur'
-        scrollPosition={scrollPosition}
-        src={image.src}
-        className={image.className}/>
-    )}
-  </div>
-)
+const Image = ({ images }) => {
+  const result = []
 
-export default trackWindowScroll(Gallery);
+  images.forEach(image => {
+    result.push(
+      <ProgressiveImage
+        src={image.src}
+        placeholder={image.lowResSrc}
+      >
+        {src => <img src={src} alt={image.alt} key={image.key} className={image.className} />}
+      </ProgressiveImage>
+    )
+  })
+
+  return(
+    <div>
+      {result}
+    </div>
+  )
+}
+
+export default Image

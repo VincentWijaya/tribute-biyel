@@ -13,7 +13,8 @@ function Photobook() {
         src: `${process.env.PUBLIC_URL}/images/${i}.jpg`,
         key: i,
         alt: '',
-        className: 'bgimage'
+        className: 'bgimage',
+        lowResSrc: `${process.env.PUBLIC_URL}/images/lowres.jpg`,
       }
     )
   }
@@ -23,7 +24,7 @@ function Photobook() {
       <CssBaseline />
       <Container maxWidth="xl">
         <ScrollToTop showBelow={window.innerHeight * 5} />
-        <Image images={images} scrollPosition={window.pageYOffset}/>
+        <Image images={images}/>
       </Container>
     </React.Fragment>
   )
