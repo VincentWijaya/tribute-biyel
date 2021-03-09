@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 import IconButton from '@material-ui/core/IconButton'
 import GetAppIcon from '@material-ui/icons/GetApp'
-import FileSaver from 'file-saver'
+// import { PDFDownloadLink } from '@react-pdf/renderer'
+
+import BriellePhotobook from '../PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,13 +74,6 @@ const Scroll = ({
     window[`scrollTo`]({ top: 0, behavior: `smooth` })
   }
 
-  const handleDownloadPdf = () => {
-    FileSaver.saveAs(
-      `${process.env.PUBLIC_URL}/PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf`,
-      'PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf'
-    )
-  }
-
   useEffect(() => {
     if (showBelow) {
       window.addEventListener(`scroll`, handleScroll)
@@ -89,10 +84,11 @@ const Scroll = ({
   const icons = () => {
     return (
       <div className={classes.root}>
-        <IconButton onClick={handleToTop} className={classes.toTop} aria-label="to top">
+        <IconButton onClick={handleToTop} className={classes.toTop} aria-label='to top'>
           <ExpandLessIcon />
         </IconButton>
-        <IconButton onClick={handleDownloadPdf} className={classes.downloadPdf} aria-label="download">
+        <IconButton href={BriellePhotobook} target='_blank' download className={classes.downloadPdf} aria-label='download'>
+          {/* <PDFDownloadLink document={<BriellePhotobook />} filename='PHOTOBOOK DIGITAL GABRIEL ANGELINA.pdf'> */}
             <GetAppIcon />
         </IconButton>
       </div>
