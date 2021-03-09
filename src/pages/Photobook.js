@@ -1,5 +1,6 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Container from '@material-ui/core/Container'
 
 import './Photobook.css'
 import ScrollToTop from '../components/ScrollToTop'
@@ -14,9 +15,11 @@ function Photobook() {
 
   return (
     <React.Fragment>
-      <ScrollToTop showBelow={window.innerHeight} />
       <CssBaseline />
-      {images}
+      <Container maxWidth="xl">
+        <ScrollToTop showBelow={window.innerHeight * 5} />
+        {images}
+      </Container>
     </React.Fragment>
   )
 }
