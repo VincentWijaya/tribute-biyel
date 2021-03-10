@@ -5,6 +5,7 @@ import Photobook from './pages/Photobook'
 function App() {
   return (
     <>
+      <style>{'body { background-color: black; }'}</style>
       <Router>
         <Switch>
           <Route path='/' component={Photobook} />
