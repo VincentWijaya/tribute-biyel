@@ -8,7 +8,8 @@ function App() {
       <style>{'body { background-color: black; }'}</style>
       <Router>
         <Switch>
-          <Route path='/' component={Photobook} />
+          <Route path='/' component={ Photobook }
+          />
         </Switch>
       </Router>
     </>

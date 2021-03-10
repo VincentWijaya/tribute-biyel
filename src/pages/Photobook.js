@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container'
 
 import ScrollToTop from '../components/ScrollToTop'
 import Image from '../components/Image'
+import Countdown from '../components/Countdown'
 
 function Photobook() {
   const images = []
@@ -19,13 +20,23 @@ function Photobook() {
     )
   }
 
+  const checkReleaseDate = () => {
+    if (window.env.RELEASE_DATE >= +new Date()) {
+      return <Countdown />
+    }
+
+    return (
+      <Container maxWidth="xl">
+        <ScrollToTop showBelow={window.innerHeight * 5} />
+        <Image images={images} />
+      </Container>
+    )
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xl">
-        <ScrollToTop showBelow={window.innerHeight * 5} />
-        <Image images={images}/>
-      </Container>
+      {checkReleaseDate()}
     </React.Fragment>
   )
 }
