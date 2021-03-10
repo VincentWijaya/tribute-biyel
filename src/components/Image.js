@@ -1,7 +1,7 @@
 import React from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 
-import './Image.css'
+import '../stylesheets/Image.css'
 
 const Image = ({ images }) => {
   const result = []

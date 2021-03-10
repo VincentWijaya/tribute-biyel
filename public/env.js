@@ -6,7 +6,7 @@ window.env = {
   "npm_config_only": "",
   "npm_config_commit_hooks": "true",
   "npm_config_browser": "",
-  "npm_package_gitHead": "35257f772385a55233b1f99489e7a994b19007bc",
+  "npm_package_gitHead": "7e887c16c64806137ab00abdedc2986f7fcd8a95",
   "npm_config_also": "",
   "npm_config_sign_git_commit": "",
   "npm_config_rollback": "true",
@@ -39,7 +39,7 @@ window.env = {
   "npm_config_local_address": "",
   "npm_config_git_tag_version": "true",
   "npm_config_cert": "",
-  "TERM_SESSION_ID": "w0t2p0:8A60EC08-5FC7-40DD-818A-72684966D2DE",
+  "TERM_SESSION_ID": "w0t1p0:64219E58-CEE4-4663-9B59-7E47813AE893",
   "npm_config_registry": "https://registry.npmjs.org/",
   "npm_config_noproxy": "",
   "npm_config_fetch_retries": "2",
@@ -154,7 +154,7 @@ window.env = {
   "npm_config_cache_lock_stale": "60000",
   "npm_config_otp": "",
   "npm_config_cache_min": "10",
-  "ITERM_SESSION_ID": "w0t2p0:8A60EC08-5FC7-40DD-818A-72684966D2DE",
+  "ITERM_SESSION_ID": "w0t1p0:64219E58-CEE4-4663-9B59-7E47813AE893",
   "npm_config_searchexclude": "",
   "npm_config_cache": "/Users/work/.npm",
   "npm_package_dependencies_react_scripts": "4.0.3",
@@ -196,5 +196,6 @@ window.env = {
   "npm_config_format_package_lock": "true",
   "npm_package_dependencies__material_ui_icons": "^4.11.2",
   "COLORTERM": "truecolor",
-  "PAGE_SIZE": "20"
+  "PAGE_SIZE": "20",
+  "RELEASE_DATE": "1615654800000"
 };
