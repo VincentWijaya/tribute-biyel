@@ -1,16 +1,22 @@
 .container {
   color: #333;
-  margin: 8% auto;
-  text-align: center;
+  margin: 0 auto;
 }
 
 h1 {
-  font-weight: normal;
-  font-size: xx-large;
+  font-weight: bold;
+  font-size: 2.3em;
   letter-spacing: .125rem;
   text-transform: uppercase;
   color: white;
   text-align: center;
+}
+
+ul {
+  margin: auto 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -20,6 +26,7 @@ li {
   padding: 1em;
   text-transform: uppercase;
   color: white;
+  text-align: center;
 }
 
 li span {
@@ -29,18 +36,21 @@ li span {
 }
 
 img {
-  height: 25%;
-  width: 25%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   h1 {
     font-size: 1.5rem;
   }
   
   li {
     font-size: 1.125rem;
-    padding: .75rem;
+    padding: .35rem;
   }
   
   li span {
