@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
+import moment from 'moment'
 
-import '../stylesheets/countdown.css'
+import '../stylesheets/Countdown.css'
 
 function Countdown () {
   let [countdown, setCountDown] = useState({
@@ -52,6 +53,7 @@ function Countdown () {
               <li><span>{countdown.minutes}</span>Minutes</li>
               <li><span>{countdown.seconds}</span>Seconds</li>
             </ul>
+            <p>Counting down to {moment.unix(window.env.RELEASE_DATE.slice(0, -3)).format('dddd, MMMM Do, YYYY | h:mm A')}</p>
           </div>
         </div>
         )}

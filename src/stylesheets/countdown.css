@@ -12,6 +12,16 @@ h1 {
   text-align: center;
 }
 
+p {
+  font-weight: normal;
+  font-size: 1em;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 ul {
   margin: auto 50px;
   text-align: center;
