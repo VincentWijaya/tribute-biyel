@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ProgressiveImage from 'react-progressive-graceful-image'
 
 import '../stylesheets/countdown.css'
 
@@ -37,7 +38,15 @@ function Countdown () {
   return (
     <div className='container'>
       <h1>Thank you for the memories Gabriel Angelina</h1>
-      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt=''/>
+      <ProgressiveImage
+        delay={1000}
+        src={`${process.env.PUBLIC_URL}/images/logo.png`}
+        placeholder={`${process.env.PUBLIC_URL}/images/logo-lowres.jpg`}
+      >
+        {(src, loading) => (
+          <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt='' />
+        )}
+      </ProgressiveImage>
       <div>
         <ul>
           <li><span>{countdown.days}</span>{dayString}</li>
