@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import ProgressiveImage from 'react-progressive-graceful-image'
 import moment from 'moment'
 
-import '../stylesheets/countdown.css'
+import '../stylesheets/Countdown.css'
 
 function Countdown () {
   let [countdown, setCountDown] = useState({
