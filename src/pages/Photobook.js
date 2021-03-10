@@ -21,7 +21,7 @@ function Photobook() {
   }
 
   const checkReleaseDate = () => {
-    if (window.env.RELEASE_DATE >= +new Date()) {
+    if (window.env.RELEASE_DATE && window.env.RELEASE_DATE >= +new Date()) {
       return <Countdown />
     }
 
